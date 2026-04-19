@@ -15,7 +15,8 @@ documentation for details.
    :maxdepth: 2
    :caption: AWS:
 
-   hello
-   hierarchy
    codepipeline
+   pagerduty
+   datadog
+
    
