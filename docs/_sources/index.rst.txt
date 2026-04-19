@@ -16,7 +16,17 @@ documentation for details.
    :caption: AWS:
 
    codepipeline
+
+.. toctree::
+   :maxdepth: 2
+   :caption: その他:
+
    pagerduty
    datadog
+   terraform
+   cloudflare
+   gitlab_runner
+   prismacloud
+   auth0
 
    
