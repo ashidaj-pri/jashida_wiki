@@ -1,0 +1,223 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NetworkPolcy &mdash; ashida_wiki_project  ドキュメント</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="_static/documentation_options.js?v=c033477b"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/translations.js?v=4755f45a"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="PagerDuty" href="pagerduty.html" />
+    <link rel="prev" title="Ingress &amp; Egress" href="ingress_engress.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            ashida_wiki_project
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">AWS:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="codepipeline.html">Codepipeline</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Kubernetes:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="istio.html">istio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="virtual_service.html">Service Entry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="service_entry.html">Virtual Serive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ingress_engress.html">Ingress &amp; Egress</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">NetworkPolcy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">定義</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">その他:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pagerduty.html">PagerDuty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datadog.html">Datadog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terraform.html">Terraform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloudflare.html">Cloudflare</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gitlab_runner.html">Gitlab Runner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prismacloud.html">PrismaCloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auth0.html">Auth0</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ashida_wiki_project</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">NetworkPolcy</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/networkpolicy.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="networkpolcy">
+<h1>NetworkPolcy<a class="headerlink" href="#networkpolcy" title="Link to this heading">¶</a></h1>
+<section id="id1">
+<h2>概要<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>NetworkPolicyは、Kubernetesクラスター内のPod間の通信を制御するためのルール</p></li>
+<li><p>デフォルトではKubernetesのPodはすべてのPodに通信可能ですが、NetworkPolicyを使うことで特定の通信だけを許可できる</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="id2">
+<h2>定義<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<p>例：「curlのPodから外への通信は、ポート80のTCPのみを許可する」NetworkPolicyのマニフェスト</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;networking.k8s.io/v1&quot;</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NetworkPolicy</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">app-allow-external-80</span>
+<span class="w">    </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">policyTypes</span><span class="p">:</span><span class="w">     </span><span class="c1"># Egressのルールのみを適用（Ingressは対象外）</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Egress</span>
+<span class="w">    </span><span class="nt">podSelector</span><span class="p">:</span><span class="w">     </span><span class="c1"># ルールの適用対象がcurlのPodであることを表す</span>
+<span class="w">        </span><span class="nt">matchLabels</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">app-monitor</span>
+<span class="w">    </span><span class="nt">egress</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">to</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">podSelector</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">matchLabels</span><span class="p">:</span>
+<span class="w">                </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">istio</span>
+<span class="w">        </span><span class="nt">namespaceSelector</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">matchLabels</span><span class="p">:</span>
+<span class="w">                </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">istio-system</span>
+<span class="w">      </span><span class="nt">ports</span><span class="p">:</span><span class="w">           </span><span class="c1"># 80番ポートでTCPのみを許可</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
+<span class="w">        </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TCP</span>
+</pre></div>
+</div>
+<p>上記ソースコードについて部分ごとに説明します。</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;networking.k8s.io/v1&quot;</span>
+</pre></div>
+</div>
+<p>NetworkPolicy を定義するための Kubernetes API のバージョンです。
+NetworkPolicy は networking.k8s.io/v1 を利用</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NetworkPolicy</span>
+</pre></div>
+</div>
+<p>このマニフェストが NetworkPolicy リソース であることを示す。
+NetworkPolicy は、Pod の通信を制御するための Kubernetes リソースです。</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">metadata</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">app-allow-external-80</span>
+<span class="w">    </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+</pre></div>
+</div>
+<p>このリソースのメタ情報を定義するブロックです。
+nameは、NetworkPolicy の名前です。
+NameSpaceは、NetworkPolicy を作成する名前空間の名前です。</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">spec</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">policyTypes</span><span class="p">:</span><span class="w">     </span><span class="c1"># Egressのルールのみを適用（Ingressは対象外）</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Egress</span>
+</pre></div>
+</div>
+<p>policyTypesは、NetworkPolicy で制御する通信方向を指定する。
+通信方向には、主にIngressとEgressがある。
+今回だと、Egress（外向き通信）、つまりPodから外部への通信を制御する</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">podSelector</span><span class="p">:</span><span class="w">     </span><span class="c1"># ルールの適用対象がcurlのPodであることを表す</span>
+<span class="w">    </span><span class="nt">matchLabels</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">app-monitor</span>
+</pre></div>
+</div>
+<p>NetworkPolicy を適用する Pod を選択する設定する。
+matchLabelsは、Pod のラベルを使って対象を指定する。
+今回だと、app=app-monitorというラベルを持つPodを対象とする。</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">egress</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">to</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">podSelector</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">matchLabels</span><span class="p">:</span>
+<span class="w">                </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">istio</span>
+<span class="w">        </span><span class="nt">namespaceSelector</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">matchLabels</span><span class="p">:</span>
+<span class="w">                </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">istio-system</span>
+<span class="w">      </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
+<span class="w">        </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TCP</span>
+</pre></div>
+</div>
+<p>egressは、Egress(外向き通信)の許可ルールを定義する部分です。
+NetworkPolicy は基本的に、許可リスト方式です。</p>
+<p>Namespace 名で指定したい場合でも、NetworkPolicy では通常 namespaceSelector を使うため、Namespace にラベルを付けて指定する。
+PodSelectorは、通信先 Pod の条件を指定する。
+portsは、許可する通信プロトコルとポートを指定する。
+今回だと、以下のような意味になる。</p>
+<p>app=istio-system ラベルを持つ Namespace 内にある、app=istio ラベルを持つ PodへのTCP 80番ポート宛ての通信通信を許可する</p>
+<p>※ portsに&quot;-&quot;がない理由は、toとportsをAND条件とするため。</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ingress_engress.html" class="btn btn-neutral float-left" title="Ingress &amp; Egress" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pagerduty.html" class="btn btn-neutral float-right" title="PagerDuty" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, author.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -19,6 +19,16 @@ documentation for details.
 
 .. toctree::
    :maxdepth: 2
+   :caption: Kubernetes:
+
+   istio
+   virtual_service
+   service_entry
+   ingress_engress
+   networkpolicy
+
+.. toctree::
+   :maxdepth: 2
    :caption: その他:
 
    pagerduty
