@@ -1,0 +1,200 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Twilio &mdash; ashida_wiki_project  ドキュメント</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="_static/documentation_options.js?v=c033477b"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/translations.js?v=4755f45a"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="prev" title="Auth0" href="auth0.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            ashida_wiki_project
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">AWS:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="codepipeline.html">Codepipeline</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Kubernetes:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="istio.html">istio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="virtual_service.html">Service Entry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="service_entry.html">Virtual Serive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ingress_engress.html">Ingress &amp; Egress</a></li>
+<li class="toctree-l1"><a class="reference internal" href="networkpolicy.html">NetworkPolcy</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">その他:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pagerduty.html">PagerDuty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datadog.html">Datadog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terraform.html">Terraform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloudflare.html">Cloudflare</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gitlab_runner.html">Gitlab Runner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prismacloud.html">PrismaCloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auth0.html">Auth0</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Twilio</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Twilioの製品やソリューション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">運用</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ashida_wiki_project</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Twilio</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/twilio.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="twilio">
+<h1>Twilio<a class="headerlink" href="#twilio" title="Link to this heading">¶</a></h1>
+<section id="id1">
+<h2>概要<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><p>アプリケーションに電話、SMS、ビデオ、チャットなどのコミュニケーション機能を組み込むためのクラウドベースのAPIプラットフォーム</p>
+</div></blockquote>
+</section>
+<section id="id2">
+<h2>Twilioの製品やソリューション<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Twilio Sendgrid Email API</p></td>
+<td><p>Twilioのプラットフォーム内で提供されるメール配信サービス。ユーザーは、マーケティングメールやトランザクションメールの送信、メールキャンペーンの管理、メールパフォーマンスの分析などを行うことが可能。</p></td>
+</tr>
+<tr class="row-even"><td><p>Twilio Authy</p></td>
+<td><p>二要素認証（2FA）ソリューション。</p></td>
+</tr>
+<tr class="row-odd"><td><p>SMS（Programmable Messaging）</p></td>
+<td><p>アプリケーションやサービスにSMS送受信機能を組み込み可能。リアルタイムの通知、アラート、マーケティングメッセージなどを送信。</p></td>
+</tr>
+<tr class="row-even"><td><p>Programmable Voice（Twilio Voice）</p></td>
+<td><p>アプリケーションに音声通話機能を組み込み可能。</p></td>
+</tr>
+<tr class="row-odd"><td><p>Twilio Flex</p></td>
+<td><p>カスタマイズ可能なクラウドベースのコンタクトセンタープラットフォーム。音声通話、チャット、SMS、メールなど、多様なコミュニケーションチャネルを一つのインターフェースで統合可能。</p></td>
+</tr>
+<tr class="row-even"><td><p>Verify（Twilio Verify）</p></td>
+<td><p>セキュリティ強化サービスで、主に二要素認証（2FA）の実装に使用。</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id3">
+<h2>運用<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>マスターアカウント</dt><dd><ul>
+<li><p>今後は、「プロジェクト」と呼ばれるそう。</p></li>
+<li><p>マスターアカウントには複数のユーザーが所属可能。</p></li>
+<li><p>役割としては、所属するユーザーを管理することためであることが多い。</p></li>
+<li><p>1つのメールアドレスで複数のマスターアカウントにも所属可能</p></li>
+<li><dl class="simple">
+<dt>決済登録はマスターアカウントのみで可能。</dt><dd><ul>
+<li><p>もしも決済方法を分けたい場合は、マスターアカウントを分ける必要あり。</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>サブアカウント</dt><dd><ul>
+<li><p>マスターアカウントが管理するTwilioのアカウント</p></li>
+<li><dl class="simple">
+<dt>サブアカウントごとに電話番号の管理やそれぞれのデータを完全に切り分けることが可能。</dt><dd><ul>
+<li><p>アプリやチームごとにサブアカウント発行し、管理担当を分けることも可能。</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p><a class="reference external" href="https://qiita.com/kimihom/items/4b59d4d090630440e151">引用元サイト</a></p>
+</div></blockquote>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="auth0.html" class="btn btn-neutral float-left" title="Auth0" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, author.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

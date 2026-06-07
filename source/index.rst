@@ -38,5 +38,6 @@ documentation for details.
    gitlab_runner
    prismacloud
    auth0
+   twilio
 
    
