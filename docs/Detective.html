@@ -3,23 +3,23 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="ja" data-content_root="./">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>検索 &mdash; ashida_wiki_project  ドキュメント</title>
+  <title>Detective &mdash; ashida_wiki_project  ドキュメント</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
 
   
-    
       <script src="_static/documentation_options.js?v=c033477b"></script>
       <script src="_static/doctools.js?v=fd6eb6e6"></script>
       <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
       <script src="_static/translations.js?v=4755f45a"></script>
     <script src="_static/js/theme.js"></script>
-    <script src="_static/searchtools.js"></script>
-    <script src="_static/language_data.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
-    <link rel="search" title="検索" href="#" /> 
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="istio" href="istio.html" />
+    <link rel="prev" title="Inspector" href="Inspector.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -34,7 +34,7 @@
             ashida_wiki_project
           </a>
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -42,12 +42,17 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">AWS:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="codepipeline.html">Codepipeline</a></li>
 <li class="toctree-l1"><a class="reference internal" href="privatelink.html">PrivateLink</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Redshift.html">RedShift</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Inspector.html">Inspector</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Detective.html">Detective</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Detective</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">仕様</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">運用</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Kubernetes:</span></p>
 <ul>
@@ -83,8 +88,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">検索</li>
+      <li class="breadcrumb-item active">Detective</li>
       <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Detective.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -92,22 +98,41 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search functionality.
-    </p>
-  </div>
-  </noscript>
+  <section id="detective">
+<h1>Detective<a class="headerlink" href="#detective" title="Link to this heading">¶</a></h1>
+<section id="id1">
+<h2>概要<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>AWS上で発生したセキュリティイベントの背景調査を効率化する</p></li>
+<li><p>マネージドサービス</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="id2">
+<h2>仕様<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>AWS CloudTrail ログやAmazon VPC フローログ、Amazon GuardDutyの検出結果などのデータソースから情報を収集し、機械学習やグラフ理論を用いて関連リソース同士のつながりを可視化</p></li>
+<li><p>アラートの発生源や影響範囲を直感的に把握でき、調査にかかる時間と手間を大幅に削減することが可能</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="id3">
+<h2>運用<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><p><a class="reference external" href="https://baresupport.jp/blog/2025/05/07/860/">引用元サイト</a></p>
+</div></blockquote>
+</section>
+</section>
 
-  
-  <div id="search-results">
-  
-  </div>
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Inspector.html" class="btn btn-neutral float-left" title="Inspector" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="istio.html" class="btn btn-neutral float-right" title="istio" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 
@@ -129,14 +154,7 @@
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-  <script>
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script id="searchindexloader"></script>
-   
-
+  </script> 
 
 </body>
 </html>

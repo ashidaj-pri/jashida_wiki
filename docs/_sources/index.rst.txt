@@ -16,6 +16,12 @@ documentation for details.
    :caption: AWS:
 
    codepipeline
+   privatelink
+   Redshift
+   Inspector
+   Detective
+   Macie
+
 
 .. toctree::
    :maxdepth: 2
