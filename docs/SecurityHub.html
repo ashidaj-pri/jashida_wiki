@@ -3,23 +3,21 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="ja" data-content_root="./">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>検索 &mdash; ashida_wiki_project  ドキュメント</title>
+  <title>SecurityHub &mdash; ashida_wiki_project  ドキュメント</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
 
   
-    
       <script src="_static/documentation_options.js?v=c033477b"></script>
       <script src="_static/doctools.js?v=fd6eb6e6"></script>
       <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
       <script src="_static/translations.js?v=4755f45a"></script>
     <script src="_static/js/theme.js"></script>
-    <script src="_static/searchtools.js"></script>
-    <script src="_static/language_data.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
-    <link rel="search" title="検索" href="#" /> 
+    <link rel="search" title="検索" href="search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -34,7 +32,7 @@
             ashida_wiki_project
           </a>
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -85,8 +83,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">検索</li>
+      <li class="breadcrumb-item active">SecurityHub</li>
       <li class="wy-breadcrumbs-aside">
+            <a href="_sources/SecurityHub.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -94,18 +93,40 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search functionality.
-    </p>
-  </div>
-  </noscript>
+  <section id="securityhub">
+<h1>SecurityHub<a class="headerlink" href="#securityhub" title="Link to this heading">¶</a></h1>
+<section id="id1">
+<h2>概要<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>AWSの対象サービスのアラートを一元管理する仕組みを持つサービス</p></li>
+<li><p>分析結果をもとに一般的なコンプライアンスに基づいたAWS環境になっているかどうかのチェックをしてくれる</p></li>
+<li><p>ただし、AWS Security Hubで統合されたアラートによる自動修復の機能はない</p></li>
+<li><p>AWS Security Hubの一元管理の対象にできるAWSのサービスは以下のとおり</p>
+<ul>
+<li><p>Amazon GuardDuty</p></li>
+<li><p>Amazon Inspector</p></li>
+<li><p>IAM Access Analyzer</p></li>
+<li><p>Amazon Macie</p></li>
+<li><p>AWS Firewall Manager</p></li>
+</ul>
+</li>
+</ul>
+<p>一番のメリットは、複数にわたるサービスで発生したアラートを1つの画面でまとめて見れること。</p>
+</section>
+<section id="id2">
+<h2>構成<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><img alt="_images/securityhub_image.png" src="_images/securityhub_image.png" />
+</div></blockquote>
+</section>
+<section id="id3">
+<h2>参考<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><p><a class="reference external" href="https://www.wafcharm.com/jp/blog/aws-security-hub-for-beginners/">引用元サイト</a></p>
+</div></blockquote>
+</section>
+</section>
 
-  
-  <div id="search-results">
-  
-  </div>
 
            </div>
           </div>
@@ -131,14 +152,7 @@
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-  <script>
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script id="searchindexloader"></script>
-   
-
+  </script> 
 
 </body>
 </html>

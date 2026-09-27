@@ -21,6 +21,8 @@ documentation for details.
    Inspector
    Detective
    Macie
+   MigrationHub
+   SecurityHub
 
 
 .. toctree::
